@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  get "products/new"
+  # 新規商品
+  get 'products/new'
+  post 'products', to: 'products#create'  # 登録
+
+  # トップページ
   root to: "homes#top"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
